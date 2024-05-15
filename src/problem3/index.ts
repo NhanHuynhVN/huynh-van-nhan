@@ -1,6 +1,7 @@
 interface WalletBalance {
    currency: string;
    amount: number;
+   blockchain: string;
 }
 interface FormattedWalletBalance extends WalletBalance {
    formatted: string;
@@ -37,7 +38,6 @@ const WalletPage: React.FC<WalletPageProps> = ({ children, ...rest }: WalletPage
    // @ts-ignore
    const sortedBalances = useMemo(() => {
       return balances.filter((balance: WalletBalance) => {
-         // @ts-ignore
          const balancePriority = getPriority(balance.blockchain);
          // @ts-ignore
          if (lhsPriority > -99) {

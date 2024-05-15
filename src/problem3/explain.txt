@@ -11,3 +11,6 @@ Explain: Destructure the props object in the function signature to make the code
 
 Issue 4: The getPriority function does not depend on any state or props within the component.
 Explain: Move the getPriority function to a global function. This way, the function is only created once and not on every render.
+
+Issue 5: Property blockchain does not exist on type WalletBalance
+Explain: Add the blockchain property to the WalletBalance interface.
