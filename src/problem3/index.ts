@@ -7,7 +7,7 @@ interface FormattedWalletBalance extends WalletBalance {
    formatted: string;
 }
 
-const getPriority = (blockchain: any): number => {
+const getPriority = (blockchain: string): number => {
    switch (blockchain) {
       case 'Osmosis':
          return 100

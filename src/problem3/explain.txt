@@ -1,16 +1,19 @@
 FIND THE ISSUES IN index.ts, REFACTOR THE CODE AND EXPLAIN THE REASONING
 
-Issue 1: WalletBalance and FormattedWalletBalance interfaces have duplicate properties.
-Explain: Using extends keyword, the FormattedWalletBalance interface extends the WalletBalance interface.
+Issue 1: "WalletBalance" and "FormattedWalletBalance" interfaces have duplicate properties.
+Explain: Using extends keyword, the "FormattedWalletBalance" interface extends the "WalletBalance" interface.
 
-Issue 2: Props interface might lead to confusion.
-Explain: Rename Props to WalletPageProps to make it clear that it is the props for the WalletPage component.
+Issue 2: "Props" interface might lead to confusion.
+Explain: Rename Props to "WalletPageProps" to make it clear that it is the props for the "WalletPage" component.
 
-Issue 3: The "props" argument in the WalletPage component might lead to slightly more verbose code.
+Issue 3: The "props" argument in the "WalletPage" component might lead to slightly more verbose code.
 Explain: Destructure the props object in the function signature to make the code more concise and readable.
 
-Issue 4: The getPriority function does not depend on any state or props within the component.
-Explain: Move the getPriority function to a global function. This way, the function is only created once and not on every render.
+Issue 4: The "getPriority" function does not depend on any state or props within the component.
+Explain: Move the "getPriority" function to a global function. This way, the function is only created once and not on every render.
 
-Issue 5: Property blockchain does not exist on type WalletBalance
-Explain: Add the blockchain property to the WalletBalance interface.
+Issue 5: Property "blockchain" does not exist on type "WalletBalance"
+Explain: Add the blockchain property to the "WalletBalance" interface.
+
+Issue 6: The "blockchain" argument in the getPriority function should have string type.
+Explain: Change the type of the "blockchain" argument to string.
