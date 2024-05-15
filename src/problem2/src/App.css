@@ -1,0 +1,14 @@
+.text-input-99tech {
+    border: 3px solid transparent;
+}
+
+.text-input-99tech:hover {
+    background: linear-gradient(#0e0e2a, #0e0e2a) padding-box, linear-gradient(90deg, #a93eff, #5e40de, #00b3ff) border-box;
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+
+.ant-select-dropdown {
+    background-color: #0e0e2a; /* Change this to your desired background color */
+    color: #fff; /* Change this to your desired text color */
+}

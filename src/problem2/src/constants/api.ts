@@ -1,0 +1,1 @@
+export const PRICE_API_ENDPOINT = 'https://interview.switcheo.com/prices.json';
