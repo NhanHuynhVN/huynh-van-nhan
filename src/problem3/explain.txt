@@ -8,3 +8,6 @@ Explain: Rename Props to WalletPageProps to make it clear that it is the props f
 
 Issue 3: The "props" argument in the WalletPage component might lead to slightly more verbose code.
 Explain: Destructure the props object in the function signature to make the code more concise and readable.
+
+Issue 4: The getPriority function does not depend on any state or props within the component.
+Explain: Move the getPriority function to a global function. This way, the function is only created once and not on every render.

@@ -6,6 +6,23 @@ interface FormattedWalletBalance extends WalletBalance {
    formatted: string;
 }
 
+const getPriority = (blockchain: any): number => {
+   switch (blockchain) {
+      case 'Osmosis':
+         return 100
+      case 'Ethereum':
+         return 50
+      case 'Arbitrum':
+         return 30
+      case 'Zilliqa':
+         return 20
+      case 'Neo':
+         return 20
+      default:
+         return -99
+   }
+}
+
 // @ts-ignore
 interface WalletPageProps extends BoxProps {
 
@@ -16,23 +33,6 @@ const WalletPage: React.FC<WalletPageProps> = ({ children, ...rest }: WalletPage
    const balances = useWalletBalances();
    // @ts-ignore
    const prices = usePrices();
-
-   const getPriority = (blockchain: any): number => {
-      switch (blockchain) {
-         case 'Osmosis':
-            return 100
-         case 'Ethereum':
-            return 50
-         case 'Arbitrum':
-            return 30
-         case 'Zilliqa':
-            return 20
-         case 'Neo':
-            return 20
-         default:
-            return -99
-      }
-   }
 
    // @ts-ignore
    const sortedBalances = useMemo(() => {
