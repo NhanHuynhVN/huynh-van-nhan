@@ -5,3 +5,6 @@ Explain: Using extends keyword, the FormattedWalletBalance interface extends the
 
 Issue 2: Props interface might lead to confusion.
 Explain: Rename Props to WalletPageProps to make it clear that it is the props for the WalletPage component.
+
+Issue 3: The "props" argument in the WalletPage component might lead to slightly more verbose code.
+Explain: Destructure the props object in the function signature to make the code more concise and readable.

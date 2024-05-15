@@ -11,9 +11,7 @@ interface WalletPageProps extends BoxProps {
 
 }
 // @ts-ignore
-const WalletPage: React.FC<WalletPageProps> = (props: WalletPageProps) => {
-   // @ts-ignore
-   const { children, ...rest } = props;
+const WalletPage: React.FC<WalletPageProps> = ({ children, ...rest }: WalletPageProps) => {
    // @ts-ignore
    const balances = useWalletBalances();
    // @ts-ignore
