@@ -57,14 +57,15 @@ const WalletPage: React.FC<WalletPageProps> = ({ children, ...rest }: WalletPage
       });
    }, [balances, prices]);
 
-   const formattedBalances = sortedBalances.map((balance: WalletBalance) => {
-      return {
-         ...balance,
-         formatted: balance.amount.toFixed()
-      }
-   })
+   const formattedBalances = useMemo(() => sortedBalances.map((balance: WalletBalance) => {
+         return {
+            ...balance,
+            formatted: balance.amount.toFixed()
+         }
+      })
+   )
 
-   const rows = formattedBalances.map((balance: FormattedWalletBalance, index: number) => {
+   const rows = useMemo(() => formattedBalances.map((balance: FormattedWalletBalance, index: number) => {
       const usdValue = prices[balance.currency] * balance.amount;
       return (
          <WalletRow
@@ -75,7 +76,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ children, ...rest }: WalletPage
             formattedAmount={balance.formatted}
          />
       )
-   })
+   }), [formattedBalances])
 
    return (
       <div {...rest}>

@@ -20,3 +20,6 @@ Explain: Change the type of the "blockchain" argument to string.
 
 Issue 7: I think the "rows" variable uses wrong variable to map over ("sortedBalances" instead of "formattedBalances").
 Explain: Change the "rows" variable to map over the "formattedBalances" array instead of the "sortedBalances" array.
+
+Issue 8: The "formattedBalances" and "rows" variables should use useMemo to avoid unnecessary re-renders.
+Explain: Use the useMemo hook to memoize the "formattedBalances" and "rows" variables and only recalculate it when the "sortedBalances" array changes.
