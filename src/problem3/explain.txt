@@ -1,0 +1,2 @@
+Issue 1: WalletBalance and FormattedWalletBalance interfaces have duplicate properties.
+Explain: Using extends keyword, the FormattedWalletBalance interface extends the WalletBalance interface.
