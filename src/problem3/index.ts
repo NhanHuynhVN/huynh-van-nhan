@@ -7,11 +7,11 @@ interface FormattedWalletBalance extends WalletBalance {
 }
 
 // @ts-ignore
-interface Props extends BoxProps {
+interface WalletPageProps extends BoxProps {
 
 }
 // @ts-ignore
-const WalletPage: React.FC<Props> = (props: Props) => {
+const WalletPage: React.FC<WalletPageProps> = (props: WalletPageProps) => {
    // @ts-ignore
    const { children, ...rest } = props;
    // @ts-ignore

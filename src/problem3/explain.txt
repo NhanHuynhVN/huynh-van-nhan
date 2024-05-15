@@ -1,2 +1,7 @@
+FIND THE ISSUES IN index.ts, REFACTOR THE CODE AND EXPLAIN THE REASONING
+
 Issue 1: WalletBalance and FormattedWalletBalance interfaces have duplicate properties.
 Explain: Using extends keyword, the FormattedWalletBalance interface extends the WalletBalance interface.
+
+Issue 2: Props interface might lead to confusion.
+Explain: Rename Props to WalletPageProps to make it clear that it is the props for the WalletPage component.
