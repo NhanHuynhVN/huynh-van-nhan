@@ -17,3 +17,6 @@ Explain: Add the blockchain property to the "WalletBalance" interface.
 
 Issue 6: The "blockchain" argument in the getPriority function should have string type.
 Explain: Change the type of the "blockchain" argument to string.
+
+Issue 7: I think the "rows" variable uses wrong variable to map over ("sortedBalances" instead of "formattedBalances").
+Explain: Change the "rows" variable to map over the "formattedBalances" array instead of the "sortedBalances" array.

@@ -47,9 +47,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ children, ...rest }: WalletPage
          }
          return false
       }).sort((lhs: WalletBalance, rhs: WalletBalance) => {
-         // @ts-ignore
          const leftPriority = getPriority(lhs.blockchain);
-         // @ts-ignore
          const rightPriority = getPriority(rhs.blockchain);
          if (leftPriority > rightPriority) {
             return -1;
@@ -66,7 +64,7 @@ const WalletPage: React.FC<WalletPageProps> = ({ children, ...rest }: WalletPage
       }
    })
 
-   const rows = sortedBalances.map((balance: FormattedWalletBalance, index: number) => {
+   const rows = formattedBalances.map((balance: FormattedWalletBalance, index: number) => {
       const usdValue = prices[balance.currency] * balance.amount;
       return (
          <WalletRow
