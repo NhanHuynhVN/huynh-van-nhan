@@ -8,12 +8,17 @@ interface FormattedWalletBalance {
    formatted: string;
 }
 
+// @ts-ignore
 interface Props extends BoxProps {
 
 }
+// @ts-ignore
 const WalletPage: React.FC<Props> = (props: Props) => {
+   // @ts-ignore
    const { children, ...rest } = props;
+   // @ts-ignore
    const balances = useWalletBalances();
+   // @ts-ignore
    const prices = usePrices();
 
    const getPriority = (blockchain: any): number => {
@@ -33,9 +38,12 @@ const WalletPage: React.FC<Props> = (props: Props) => {
       }
    }
 
+   // @ts-ignore
    const sortedBalances = useMemo(() => {
       return balances.filter((balance: WalletBalance) => {
+         // @ts-ignore
          const balancePriority = getPriority(balance.blockchain);
+         // @ts-ignore
          if (lhsPriority > -99) {
             if (balance.amount <= 0) {
                return true;
@@ -43,7 +51,9 @@ const WalletPage: React.FC<Props> = (props: Props) => {
          }
          return false
       }).sort((lhs: WalletBalance, rhs: WalletBalance) => {
+         // @ts-ignore
          const leftPriority = getPriority(lhs.blockchain);
+         // @ts-ignore
          const rightPriority = getPriority(rhs.blockchain);
          if (leftPriority > rightPriority) {
             return -1;
