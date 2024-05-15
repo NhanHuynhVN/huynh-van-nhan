@@ -75,17 +75,17 @@ const WalletPage: React.FC<Props> = (props: Props) => {
       return (
          <WalletRow
             className={classes.row}
-      key={index}
-      amount={balance.amount}
-      usdValue={usdValue}
-      formattedAmount={balance.formatted}
-      />
-   )
+            key={index}
+            amount={balance.amount}
+            usdValue={usdValue}
+            formattedAmount={balance.formatted}
+         />
+      )
    })
 
    return (
       <div {...rest}>
-      {rows}
+         {rows}
       </div>
    )
 }
